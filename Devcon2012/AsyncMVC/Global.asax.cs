@@ -5,13 +5,16 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using Autofac;
+using Autofac.Integration.Mvc;
+using Autofac.Integration.WebApi;
 
 namespace AsyncMVC
 {
 	// Note: For instructions on enabling IIS6 or IIS7 classic mode, 
 	// visit http://go.microsoft.com/?LinkId=9394801
 
-	public class MvcApplication : HttpApplication
+	public class AsyncMvcApplication : HttpApplication
 	{
 		public static void RegisterGlobalFilters(GlobalFilterCollection filters)
 		{
@@ -39,6 +42,17 @@ namespace AsyncMVC
 		{
 			AreaRegistration.RegisterAllAreas();
 
+			// конфигурирую autofac IoC контейнер
+			var builder = new ContainerBuilder();
+			// регистрирую контроллеры
+			builder.RegisterControllers(typeof(AsyncMvcApplication).Assembly);
+			IContainer container = builder.Build();
+
+			// устанавливаю его в качестве DependencyResolver для MVC и WebAPI
+			DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
+			GlobalConfiguration.Configuration.ServiceResolver.SetResolver(
+				new AutofacWebApiDependencyResolver(container));
+
 			// Use LocalDB for Entity Framework by default
 			Database.DefaultConnectionFactory =
 				new SqlConnectionFactory(
@@ -48,6 +62,7 @@ namespace AsyncMVC
 			RegisterRoutes(RouteTable.Routes);
 
 			BundleTable.Bundles.RegisterTemplateBundles();
+			BundleTable.Bundles.EnableBootstrapBundle();
 		}
 	}
 }
