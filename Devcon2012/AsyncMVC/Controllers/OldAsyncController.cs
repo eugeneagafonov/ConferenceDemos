@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
@@ -48,8 +49,28 @@ namespace AsyncMVC.Controllers
 				from s in client.GetSportNewsAsync()
 				from f in client.GetFunNewsAsync()
 				let all = w.Union(s).Union(f).Convert()
+				let filtered = Filter(all)
 				select View("Index",
-					new ViewModel { News = all, Elapsed = timer.Elapsed });
+					new ViewModel { News = filtered, Elapsed = timer.Elapsed });
+		}
+
+		public IEnumerable<NewsModel> Filter(
+			IEnumerable<NewsModel> originalModel)
+		{
+			foreach(var n in originalModel)
+			{
+				if(n.Text.Contains("Агафонов"))
+				{
+					yield return new NewsModel
+					{
+						Date = n.Date,
+						Heading = n.Heading,
+						Text = n.Text.Replace("Агафонов", "<h2>Агафонов</h2>")
+					};
+				}
+				yield return n;
+			}
+							
 		}
 	}
 }

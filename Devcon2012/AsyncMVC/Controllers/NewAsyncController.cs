@@ -34,7 +34,7 @@ namespace AsyncMVC.Controllers
 			}
 		}
 
-		public async Task<ActionResult> IndexCorrect()
+		public async Task<ActionResult> Index2()
 		{
 			using (var client = new NewsServiceMVC4Client())
 			{

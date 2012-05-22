@@ -9,6 +9,7 @@ namespace AsyncMVCOld.Controllers
 	public class OldAsyncController : AsyncController
 	{
 		private readonly Stopwatch _timer = new Stopwatch();
+
 		public void IndexAsync()
 		{
 			AsyncManager.OutstandingOperations.Increment(3);
