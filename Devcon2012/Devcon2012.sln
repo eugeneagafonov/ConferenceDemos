@@ -9,12 +9,18 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{E25F3C
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncMVCOld", "AsyncMVCOld\AsyncMVCOld.csproj", "{082FB486-BC02-4A7E-9055-CA6138AA74F2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{082FB486-BC02-4A7E-9055-CA6138AA74F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{082FB486-BC02-4A7E-9055-CA6138AA74F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{082FB486-BC02-4A7E-9055-CA6138AA74F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{082FB486-BC02-4A7E-9055-CA6138AA74F2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{790B7E0C-0DCC-4C72-B117-3B61BC107D1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{790B7E0C-0DCC-4C72-B117-3B61BC107D1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{790B7E0C-0DCC-4C72-B117-3B61BC107D1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
