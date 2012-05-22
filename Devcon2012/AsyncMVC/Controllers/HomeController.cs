@@ -9,12 +9,5 @@ namespace AsyncMVC.Controllers
 		{
 			return View();
 		}
-
-		public Task<ViewResult> IndexAsync()
-		{
-			return Task<ViewResult>.Factory.StartNew(
-				() => View("Index")
-			);
-		}
 	}
 }

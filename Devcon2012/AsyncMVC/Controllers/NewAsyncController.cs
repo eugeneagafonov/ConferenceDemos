@@ -9,7 +9,7 @@ namespace AsyncMVC.Controllers
 		{
 			return Task<ViewResult>.Factory.StartNew(
 				() => View()
-				);
+			);
 		}
 	}
 }

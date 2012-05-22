@@ -121,6 +121,9 @@
     <Compile Include="Extensions\Async\TaskAsyncControllerDescriptor.cs" />
     <Compile Include="Extensions\Async\TaskAsyncActionInvoker.cs" />
     <Compile Include="Extensions\Async\TaskAsyncController.cs" />
+    <Compile Include="Extensions\LinqToTasks\CancellationTokenExtensions.cs" />
+    <Compile Include="Extensions\LinqToTasks\LinqToTasks.cs" />
+    <Compile Include="Extensions\LinqToTasks\TaskCompletionSourceExtensions.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
