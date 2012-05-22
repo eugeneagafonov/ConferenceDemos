@@ -115,6 +115,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\NewAsyncController.cs" />
+    <Compile Include="Controllers\OldAsyncController.cs" />
     <Compile Include="Extensions\Async\TaskAsyncActionDescriptor.cs" />
     <Compile Include="Extensions\Async\TaskAsyncControllerDescriptor.cs" />
     <Compile Include="Extensions\Async\TaskAsyncActionInvoker.cs" />
@@ -228,6 +230,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\OldAsync\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\NewAsync\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
