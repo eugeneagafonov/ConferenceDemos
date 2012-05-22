@@ -12,6 +12,7 @@ namespace AsyncMVC.Controllers
 		{
 			return Task<ViewResult>.Factory.StartNew(() =>
 			{
+				// неправильный способ
 				using (var client = new NewsServiceMVC4Client())
 				{
 					var timer = new Stopwatch();
