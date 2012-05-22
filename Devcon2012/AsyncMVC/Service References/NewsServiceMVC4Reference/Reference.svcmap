@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="635a36fd-cc7b-49c1-b849-21345272f644" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:11319/WCF/NewsServiceMVC4.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="NewsServiceMVC4.xsd" MetadataType="Schema" ID="b0e99980-264b-4f5d-b8a3-95a40ef6bb7f" SourceId="1" SourceUrl="http://localhost:11319/WCF/NewsServiceMVC4.svc?xsd=xsd1" />
+    <MetadataFile FileName="NewsServiceMVC41.xsd" MetadataType="Schema" ID="8dd672bb-cb5d-45e1-b8d6-e6e55a1caab0" SourceId="1" SourceUrl="http://localhost:11319/WCF/NewsServiceMVC4.svc?xsd=xsd2" />
+    <MetadataFile FileName="NewsServiceMVC4.disco" MetadataType="Disco" ID="229ea93d-1d02-405f-af8a-f6896f6a41ea" SourceId="1" SourceUrl="http://localhost:11319/WCF/NewsServiceMVC4.svc?disco" />
+    <MetadataFile FileName="NewsServiceMVC4.wsdl" MetadataType="Wsdl" ID="a78bbdff-5df8-4121-959b-6db4ad31a685" SourceId="1" SourceUrl="http://localhost:11319/WCF/NewsServiceMVC4.svc?wsdl" />
+    <MetadataFile FileName="NewsServiceMVC42.xsd" MetadataType="Schema" ID="566219c9-f3c5-47fd-bfbc-6c9bbbfbf279" SourceId="1" SourceUrl="http://localhost:11319/WCF/NewsServiceMVC4.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

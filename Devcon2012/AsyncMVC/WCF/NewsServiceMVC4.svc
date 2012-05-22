@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="AsyncMVC.WCF.NewsServiceMVC4" CodeBehind="NewsServiceMVC4.svc.cs" %>

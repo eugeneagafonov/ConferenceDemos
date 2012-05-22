@@ -26,6 +26,7 @@
     <UpgradeBackupLocation />
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -86,6 +87,8 @@
       <Private>True</Private>
       <HintPath>..\packages\System.Net.Http.2.0.20126.16343\lib\net40\System.Net.Http.WebRequest.dll</HintPath>
     </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -149,10 +152,22 @@
     <Compile Include="Controllers\NewAsyncController.cs" />
     <Compile Include="Controllers\OldAsyncController.cs" />
     <Compile Include="Extensions\BundlingExtensions.cs" />
+    <Compile Include="Extensions\ModelConvertions\NewsModelExtensions.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\NewsModel.cs" />
+    <Compile Include="Models\ViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\NewsServiceMVC4Reference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="WCF\INewsServiceMVC4.cs" />
+    <Compile Include="WCF\NewsServiceMVC4.svc.cs">
+      <DependentUpon>NewsServiceMVC4.svc</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-responsive.css" />
@@ -235,6 +250,17 @@
     <Content Include="Scripts\knockout-2.1.0.js" />
     <Content Include="Scripts\modernizr-2.5.3.js" />
     <Content Include="Scripts\_references.js" />
+    <None Include="Service References\NewsServiceMVC4Reference\AsyncMVC.NewsServiceMVC4Reference.NewsModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\NewsServiceMVC4Reference\NewsServiceMVC4.disco" />
+    <None Include="Service References\NewsServiceMVC4Reference\configuration91.svcinfo" />
+    <None Include="Service References\NewsServiceMVC4Reference\configuration.svcinfo" />
+    <None Include="Service References\NewsServiceMVC4Reference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="WCF\NewsServiceMVC4.svc" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -248,17 +274,31 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\OldAsync\Index.cshtml" />
     <Content Include="Views\NewAsync\Index.cshtml" />
+    <None Include="Service References\NewsServiceMVC4Reference\NewsServiceMVC4.wsdl" />
+    <None Include="Service References\NewsServiceMVC4Reference\NewsServiceMVC4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NewsServiceMVC4Reference\NewsServiceMVC41.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NewsServiceMVC4Reference\NewsServiceMVC42.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
-    <Folder Include="Services\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\NewsServiceMVC4Reference\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
