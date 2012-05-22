@@ -152,6 +152,9 @@
     <Compile Include="Controllers\NewAsyncController.cs" />
     <Compile Include="Controllers\OldAsyncController.cs" />
     <Compile Include="Extensions\BundlingExtensions.cs" />
+    <Compile Include="Extensions\LinqToTasks\CancellationTokenExtensions.cs" />
+    <Compile Include="Extensions\LinqToTasks\LinqToTasks.cs" />
+    <Compile Include="Extensions\LinqToTasks\TaskCompletionSourceExtensions.cs" />
     <Compile Include="Extensions\ModelConvertions\NewsModelExtensions.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
