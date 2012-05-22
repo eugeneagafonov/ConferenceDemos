@@ -71,13 +71,16 @@ namespace AsyncMVCOld.Controllers
 			var service = new NewsServiceClient();
 			var client = new ServiceDecorator(service);
 
+			var timer = new Stopwatch();
+			timer.Start();
+
 			return
 				from w in client.GetWorldNewsTaskAsync()
 				from s in client.GetSportNewsTaskAsync()
 				from f in client.GetFunNewsTaskAsync()
 				let all = w.Union(s).Union(f).Convert()
 				select View("Index",
-					new ViewModel { News = f.Convert(), Elapsed = TimeSpan.FromSeconds(2) });
+					new ViewModel { News = f.Convert(), Elapsed = timer.Elapsed });
 		}
 
 
