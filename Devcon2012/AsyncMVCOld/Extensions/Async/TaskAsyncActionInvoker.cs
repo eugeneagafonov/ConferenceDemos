@@ -6,9 +6,11 @@ namespace AsyncMVCOld
 {
 	public class TaskAsyncActionInvoker : AsyncControllerActionInvoker
 	{
-		protected override ControllerDescriptor GetControllerDescriptor(ControllerContext controllerContext)
+		protected override ControllerDescriptor GetControllerDescriptor(
+			ControllerContext controllerContext)
 		{
-			return new TaskAsyncControllerDescriptor(controllerContext.Controller.GetType());
+			return new TaskAsyncControllerDescriptor(
+				controllerContext.Controller.GetType());
 		}
 	}
 }

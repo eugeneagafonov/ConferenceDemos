@@ -27,7 +27,8 @@ namespace AsyncMVCOld.Controllers
 
 				timer.Stop();
 
-				var model = new ViewModel { News = result, Elapsed = timer.Elapsed };
+				var model = new ViewModel 
+				{ News = result, Elapsed = timer.Elapsed };
 
 				return View(model);
 			}

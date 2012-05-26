@@ -30,9 +30,11 @@ namespace AsyncMVCOld
 		/// <param name="controllerContext">контекст контроллера</param>
 		/// <param name="actionName">имя action'а</param>
 		/// <returns>дескриптор action'a, умеющий работать с <see cref="Task" /></returns>
-		public override ActionDescriptor FindAction(ControllerContext controllerContext, string actionName)
+		public override ActionDescriptor FindAction(
+			ControllerContext controllerContext, string actionName)
 		{
-			var actionDescriptor = base.FindAction(controllerContext, actionName);
+			var actionDescriptor = base.FindAction(
+				controllerContext, actionName);
 			var rad = actionDescriptor as ReflectedActionDescriptor;
 			var actionMethod = (rad != null) ? rad.MethodInfo : null;
 			var returnType = (actionMethod != null) ? actionMethod.ReturnType : null;
@@ -40,7 +42,8 @@ namespace AsyncMVCOld
 			// если action возвращает Task, то создаем для него наш дескриптор
 			if (returnType != null && typeof(Task).IsAssignableFrom(returnType))
 			{
-				return new TaskAsyncActionDescriptor(actionMethod, actionName, this);
+				return new 
+					TaskAsyncActionDescriptor(actionMethod, actionName, this);
 			}
 
 			// возвращаем обычный дескриптор

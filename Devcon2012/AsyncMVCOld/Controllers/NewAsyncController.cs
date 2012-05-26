@@ -93,9 +93,11 @@ namespace AsyncMVCOld.Controllers
 				_client = client;
 			}
 
-			public Task<IEnumerable<NewsServiceReference.NewsModel>> GetWorldNewsTaskAsync()
+			public Task<IEnumerable<NewsServiceReference.NewsModel>>
+				GetWorldNewsTaskAsync()
 			{
-				return Task<IEnumerable<NewsServiceReference.NewsModel>>.Factory.FromAsync(
+				return Task<IEnumerable<NewsServiceReference.NewsModel>>
+					.Factory.FromAsync(
 					_client.BeginGetWorldNews, _client.EndGetWorldNews, null);
 			}
 

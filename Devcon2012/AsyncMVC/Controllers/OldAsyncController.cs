@@ -51,7 +51,8 @@ namespace AsyncMVC.Controllers
 				let all = w.Union(s).Union(f).Convert()
 				let filtered = Filter(all)
 				select View("Index",
-					new ViewModel { News = filtered, Elapsed = timer.Elapsed });
+					new ViewModel 
+					{ News = filtered, Elapsed = timer.Elapsed });
 		}
 
 		public IEnumerable<NewsModel> Filter(
