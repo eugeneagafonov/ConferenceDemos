@@ -1,7 +1,9 @@
-*.doc  diff=astextplain
+﻿*.doc  diff=astextplain
 *.DOC	diff=astextplain
 *.docx	diff=astextplain
 *.DOCX	diff=astextplain
+*.pptx diff=astextplain
+*.pptx diff=astextplain
 *.dot	diff=astextplain
 *.DOT	diff=astextplain
 *.pdf	diff=astextplain
