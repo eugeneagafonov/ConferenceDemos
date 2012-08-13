@@ -5,3 +5,7 @@
 function writeLine(text) {
     $("#outputDiv").append(text + '<br/>');
 }
+
+function newParagraph() {
+	writeLine("");
+}

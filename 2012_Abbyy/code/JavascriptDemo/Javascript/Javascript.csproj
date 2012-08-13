@@ -66,17 +66,27 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Javascript\1_BasicFeatures.js" />
+    <Content Include="Javascript\2_Functions.js" />
+    <Content Include="Javascript\3_Control_Flow.js" />
+    <Content Include="Javascript\4_Types_Libraries.js" />
     <Content Include="packages.config" />
     <None Include="Scripts\jquery-1.7.2.intellisense.js">
       <DependentUpon>jquery-1.7.2.js</DependentUpon>
     </None>
+    <Content Include="Scripts\date-ru-RU.js" />
+    <Content Include="Scripts\date.js" />
     <Content Include="Scripts\jquery-1.7.2.js" />
     <Content Include="Scripts\jquery-1.7.2.min.js">
       <DependentUpon>jquery-1.7.2.js</DependentUpon>
     </Content>
     <Content Include="Scripts\qunit.js" />
+    <Content Include="Scripts\underscore.js" />
+    <Content Include="Scripts\underscore.min.js" />
     <Content Include="Scripts\write.js" />
     <Content Include="Views\1_Basic_Features.html" />
+    <Content Include="Views\2_Functions.html" />
+    <Content Include="Views\3_Control_Flow.html" />
+    <Content Include="Views\4_Types_Libraries.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
