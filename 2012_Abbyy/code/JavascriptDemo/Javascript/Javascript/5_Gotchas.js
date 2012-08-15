@@ -135,12 +135,120 @@
 
 // --
 
-if(true) {
-    writeLine("true!");
-}
+//function foo() {
+//	return {
+//		"name" : "eugene"
+//	};
+//}
 
-if (true)
-{
-    writeLine("true!");
-}
+////function bar() {
+////	return 
+////	{
+////		name : "eugene"
+////	};
+////}
 
+//writeLine(foo().name);
+////writeLine(bar().name);
+
+//---------------------------
+
+//(function () {
+
+//	var i = 50;
+
+//	writeLine(i);
+//	for (var i = 0; i < 10; i++) {
+//		writeLine(i);
+//	}
+
+//	writeLine(i);
+//}());
+
+////--
+//var p1 = {
+//	name: "Eugene",
+//	sayHello: function() {
+//		writeLine("Hi, my name is " + this.name);
+//	}
+//};
+
+//p1.sayHello();
+
+//var p2 = {
+//	name: "Eugene",
+//	sayHello: function () {
+//		var f = function() {
+//			writeLine("Hi, my name is " + this.name);
+//		};
+//		f();
+//	}
+//};
+
+//p2.sayHello();
+
+////--
+
+//var processor = function(msg) {
+//	var message = msg;
+
+//	return {
+//		greet: function(callback) {
+//			return msg + " " + callback();
+//		}
+		
+		
+//	};
+//};
+
+//var person = function(name) {
+//	return {
+//		name: name,
+//		getName : function () {
+//			return this.name;
+//		}
+//	};
+//};
+
+//var p = person("Eugene");
+//writeLine(p.getName());
+
+//var proc = processor("Hello");
+//writeLine(proc.greet(p.getName));
+
+////proc.greet = function(callback, ctx) { return "New hello! " + callback.call(ctx); };
+////writeLine(proc.greet(p.getName, p));
+
+////--
+
+//function inherit(proto) {
+//	function F() { }
+//	F.prototype = proto;
+//	return new F;
+//}
+
+//function Animal(name) {
+//	var self = this;
+//	self.name = name;
+//}
+
+//Animal.prototype = {
+//	type: "mammal",
+//	walk: function() {
+//		writeLine(self.name + " walks!");
+//	}
+//};
+
+//function Rabbit() {
+//	test: "rabbit";
+//}
+
+//Rabbit.prototype = inherit(Animal.prototype);
+
+//Rabbit.prototype.jump = function () {
+//	writeLine(this.name + " jumps!");
+//}
+
+//var r = new Rabbit("Eugene");
+//r.walk();
+//r.jump();

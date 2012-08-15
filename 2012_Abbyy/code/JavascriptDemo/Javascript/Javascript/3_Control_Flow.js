@@ -56,10 +56,11 @@
 //var nums = [1, 2, 3, 4, 5, 6];
 
 //for (var i = 0; i < nums.length; i++) {
-//// var i = 0, max = nums.length
+//// var i = 0, max = nums.length // performance
 //	writeLine( nums[i]);
 //}
 
+//// doesn't guarantee the order of evaluation
 //for(var i in nums) {
 //	writeLine(i);
 //}
