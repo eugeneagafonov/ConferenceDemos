@@ -124,8 +124,23 @@
 
 //var a = "3" * "010";
 //writeLine(a);
+
+//writeLine(parseInt(1 / 0, 24));
 // ---------------------------------------------------------------
 
+//var a = 20
+//a = 5
 
+//writeLine(a);
 
+// --
+
+if(true) {
+    writeLine("true!");
+}
+
+if (true)
+{
+    writeLine("true!");
+}
 
