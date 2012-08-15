@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Javascript\localStorage.js" />
+    <Content Include="Javascript\oop.js" />
     <Content Include="Javascript\storage.js" />
     <Content Include="packages.config" />
     <None Include="Scripts\jquery-1.7.2-vsdoc.js" />
@@ -80,7 +81,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Patterns\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

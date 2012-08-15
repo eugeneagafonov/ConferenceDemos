@@ -69,6 +69,7 @@
     <Content Include="Javascript\2_Functions.js" />
     <Content Include="Javascript\3_Control_Flow.js" />
     <Content Include="Javascript\4_Types_Libraries.js" />
+    <Content Include="Javascript\5_Gotchas.js" />
     <Content Include="packages.config" />
     <None Include="Scripts\jquery-1.7.2.intellisense.js">
       <DependentUpon>jquery-1.7.2.js</DependentUpon>
@@ -87,6 +88,7 @@
     <Content Include="Views\2_Functions.html" />
     <Content Include="Views\3_Control_Flow.html" />
     <Content Include="Views\4_Types_Libraries.html" />
+    <Content Include="Views\5_Gotchas.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
